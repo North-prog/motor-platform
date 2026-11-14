@@ -58,7 +58,6 @@ export default function RequestPage() {
     return () => { active = false; };
   }, []);
 
-  const selectedBike = useMemo(() => catalogModels.find((bike) => bike.id === bikeId), [catalogModels, bikeId]);
   const visibleModels = useMemo(() => catalogModels.filter((bike) =>
     (brandFilter === "all" || bike.brand_id === brandFilter) &&
     (styleFilter === "all" || bike.style_family === styleFilter)
