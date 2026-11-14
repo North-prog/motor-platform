@@ -13,7 +13,7 @@
     {
       "binding": "DB",
       "database_name": "motor-platform-db",
-      "database_id": "REPLACE_WITH_CLOUDFLARE_D1_DATABASE_ID",
+      "database_id": "8489ca8b-b604-40bb-a7c5-1909a4d38499",
       "migrations_dir": "database/migrations"
     }
   ]
