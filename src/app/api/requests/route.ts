@@ -3,7 +3,9 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export const runtime = "nodejs";
 
-type D1Binding = { prepare(query: string): { bind(...values: unknown[]): { run(): Promise<unknown> } } };\ntype RequestPayload = {
+type D1Binding = { prepare(query: string): { bind(...values: unknown[]): { run(): Promise<unknown> } } };
+
+type RequestPayload = {
   type?: string; customerName?: string; phone?: string; motorcycle?: string;
   requestDetails?: string; address?: string; note?: string;
 };
