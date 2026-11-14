@@ -21,3 +21,9 @@
 .wizard-footer{display:flex;justify-content:space-between;color:#647168;font:9px Arial;letter-spacing:1.4px;margin-top:26px}
 @media(max-width:680px){.wizard-page{padding-inline:14px}.wizard-shell{margin-top:32px}.progress-steps>div{flex-direction:column;gap:5px;font-size:9px}.progress-steps b{width:24px;height:24px}.bike-grid{grid-template-columns:repeat(2,1fr)}.bike-photo{height:120px}.wizard-fields.two{grid-template-columns:1fr}.span-two{grid-column:auto}.service-options{grid-template-columns:1fr}.panel-title h2{font-size:21px}.panel-symbol{font-size:27px}.wizard-nav{height:66px}.map-frame{height:230px}}
 @media(max-width:390px){.progress-steps>div{font-size:8px}.bike-photo{height:95px}.bike-info{padding:9px}.review-list>div{grid-template-columns:100px 1fr}}
+
+.catalog-filters{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 16px}
+.catalog-filters label{display:flex;flex-direction:column;gap:7px;color:#b9c4bb;font-size:11px}
+.catalog-filters select{width:100%;border:1px solid #303c34;background:#0c110f;color:#eef3ed;padding:12px 14px;border-radius:2px;font:inherit;font-size:12px;outline:none}
+.catalog-filters select:focus{border-color:var(--wiz-accent)}
+@media(max-width:700px){.bike-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-filters{grid-template-columns:1fr}.bike-photo{height:96px}}
