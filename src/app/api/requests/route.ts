@@ -3,7 +3,7 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
 
 export const runtime = "nodejs";
 
-type RequestPayload = {
+type D1Binding = { prepare(query: string): { bind(...values: unknown[]): { run(): Promise<unknown> } } };\ntype RequestPayload = {
   type?: string; customerName?: string; phone?: string; motorcycle?: string;
   requestDetails?: string; address?: string; note?: string;
 };
@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const { env } = getCloudflareContext();
-    const db = (env as typeof env & { DB?: D1Database }).DB;
+    const db = (env as typeof env & { DB?: D1Binding }).DB;
     if (!db) return NextResponse.json({ error: "سامانه هنوز به پایگاه داده متصل نشده است. لطفاً بعداً دوباره تلاش کن." }, { status: 503 });
 
     const id = crypto.randomUUID();
