@@ -1,0 +1,17 @@
+/* Visual-only overrides for the existing request wizard. */
+:root{--wiz-bg:#171512;--wiz-panel:#1f1c18;--wiz-line:#3a342d;--wiz-text:#f3e9dc;--wiz-muted:#b09b84;--wiz-accent:#f3e9dc;--wiz-orange:#e8742a}
+.wizard-page{background:radial-gradient(ellipse at 50% -15%,#3a2a1d 0,transparent 45%),#171512;font-family:'Manrope','Vazirmatn',sans-serif}
+.wizard-nav{border-bottom-color:#3a342d}.wizard-logo{display:none}.wizard-brand{font:700 14px 'Unbounded',Arial,sans-serif;letter-spacing:.3em}.wizard-brand>span:last-child:after{content:".";color:var(--wiz-orange)}
+.wizard-exit span,.progress-meta span:last-child,.panel-title small,.bike-info small,.service-options button span,.type-card>span,.bike-placeholder span,.success-panel>small,.success-icon,.gps-button,.map-frame>a{color:var(--wiz-orange)}
+.wizard-kicker i{background:var(--wiz-orange);box-shadow:0 0 12px #e8742a88}.wizard-heading h1{font-family:'Vazirmatn','Unbounded',sans-serif;font-weight:300}.wizard-heading h1 span{color:var(--wiz-orange)}
+.progress-track{background:#3a342d}.progress-track>span{background:var(--wiz-orange)}.progress-steps b{border-color:#4a4238}.progress-steps .current{color:#f3e9dc}.progress-steps .current b{background:var(--wiz-orange);border-color:var(--wiz-orange);color:#171512}
+.wizard-panel{background:#1f1c18;border-color:#3a342d;box-shadow:0 22px 70px #0006}.panel-symbol{color:#4a4238}
+.bike-choice,.type-card,.service-options button,.wizard-fields input,.wizard-fields select,.wizard-fields textarea,.catalog-filters select{background:#171512;border-color:#3a342d;color:#f3e9dc}
+.bike-choice:hover,.bike-choice.selected,.type-card.chosen,.service-options button.active{border-color:var(--wiz-orange)}.type-card.chosen{background:#2a231c}
+.bike-placeholder{background:repeating-linear-gradient(135deg,#1f1c18,#1f1c18 12px,#26221d 12px,#26221d 24px)}.bike-photo i{background:#171512cc}
+.wizard-fields input:focus,.wizard-fields select:focus,.wizard-fields textarea:focus,.catalog-filters select:focus{border-color:var(--wiz-orange)}
+.wizard-fields label,.catalog-filters label{color:#c9b49c}.wizard-hint{color:#9c8b78}.map-frame{border-color:#3a342d;background:#1f1c18}.map-frame iframe{filter:grayscale(1) invert(.9) sepia(.45) brightness(.8)}.map-frame>a{background:#171512db}
+.gps-button{background:#2a231c;border-color:#6b4a30}.coordinate-note{color:#c9b49c}.service-options button{color:#d9ccbb}
+.review-list{border-top-color:#3a342d}.review-list>div{border-bottom-color:#3a342d}.review-list small{color:#9c8b78}.review-list b{color:#f3e9dc}.review-list span{color:#c9b49c}
+.approval-note{background:#2a231c;border-color:var(--wiz-orange);color:#e8d8c4}.wizard-primary{background:#f3e9dc;color:#171512;border-radius:999px}.wizard-primary:hover{background:#fff7ec}.wizard-back{border-radius:999px;border-color:#4a4238;color:#d9ccbb}
+.wizard-status{background:#2a1d14;border-color:#7a4a28;color:#f0bf8f}.success-icon{border-color:var(--wiz-orange)}.wizard-footer{color:#9c8b78}
