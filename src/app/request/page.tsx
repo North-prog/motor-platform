@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useEffect, useState } from "react";
 
 export default function RequestPage() {
@@ -27,7 +28,7 @@ export default function RequestPage() {
   }
 
   return <main className="request-page" dir="rtl">
-    <nav className="nav wrap"><a className="brand" href="/"><span className="brand-mark">M</span><span>MOTOR<span className="muted">PLUS</span></span></a><a className="back-link" href="/">بازگشت به صفحه اصلی ←</a></nav>
+    <nav className="nav wrap"><Link className="brand" href="/"><span className="brand-mark">M</span><span>MOTOR<span className="muted">PLUS</span></span></Link><Link className="back-link" href="/">بازگشت به صفحه اصلی ←</Link></nav>
     <section className="request-wrap">
       <div className="eyebrow"><span />SARl / SERVICE DESK</div>
       <h1>درخواستت رو ثبت کن<span>.</span></h1>
