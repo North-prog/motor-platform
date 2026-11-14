@@ -1,12 +1,10 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function RequestPage() {
-  const params = useSearchParams();
-  const initial = params.get("type") === "part" ? "part" : "service";
-  const [type, setType] = useState(initial);
+  const [type, setType] = useState("service");
+  useEffect(() => { if (new URLSearchParams(window.location.search).get("type") === "part") setType("part"); }, []);
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -14,14 +12,15 @@ export default function RequestPage() {
     e.preventDefault();
     setBusy(true);
     setStatus("");
-    const form = new FormData(e.currentTarget);
+    const formElement = e.currentTarget;
+    const form = new FormData(formElement);
     const payload = Object.fromEntries(form.entries());
     try {
       const response = await fetch("/api/requests", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...payload, type }) });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "ثبت درخواست انجام نشد.");
       setStatus("درخواستت ثبت شد. برای هماهنگی با تو تماس می‌گیریم.");
-      e.currentTarget.reset();
+      formElement.reset();
     } catch (err) {
       setStatus(err instanceof Error ? err.message : "خطا در ثبت درخواست");
     } finally { setBusy(false); }
